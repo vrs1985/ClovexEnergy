@@ -1,0 +1,24 @@
+DataBase MySQL:
+    Structure:
+        CREATE TABLE users
+        (
+        id int(25) AUTO_INCREMENT,
+        user_name varchar(30) NOT NULL UNIQUE,
+        user_login varchar(20) NOT NULL UNIQUE,
+        user_password varchar(255) NOT NULL,
+        user_email varchar(35) NOT NULL,
+        user_status int(11) DEFAULT '1',
+        user_picture varchar(255) DEFAULT 'img/user_avatar/default-avatar.png',
+        PRIMARY KEY (id)
+        );
+        CREATE TABLE histogram
+        (
+        id int (255) AUTO_INCREMENT,
+        start int (25) NOT NULL,
+        duration int (25) NOT NULL,
+        histo_date int (25) NOT NULL,
+        value int (25) NOT NULL,
+        cost int (25) NOT NULL,
+        user_id int (25) NOT NULL,
+        PRIMARY KEY (id)
+        );
